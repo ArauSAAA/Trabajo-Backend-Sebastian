@@ -1,0 +1,12 @@
+body { background-color: #0b0f17; color: #e6eef7; }
+    .navbar { background-color: #141a24; }
+    .card { background-color: #141a24; color: #e6eef7; border: 1px solid rgba(255,255,255,.1); }
+    .badge-custom { background: linear-gradient(135deg, #5dd1ff, #7cffb2); color: #001018; font-weight: 700; }
+    .btn-custom { background-color: rgba(255,255,255,.1); color: #e6eef7; border: none; }
+    .btn-custom.active { border: 1px solid #5dd1ff; }
+    .modal-content { background-color: #141a24; color: #e6eef7; }
+
+
+.text-ligth{
+    color: white;
+}
