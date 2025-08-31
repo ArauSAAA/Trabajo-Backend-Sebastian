@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% load static %}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Acceso | Registro</title>
+  <link rel="stylesheet" type="text/css" href="{% static "peliculasApp/css/estilos.css" %}">
+  <link rel="stylesheet" type="text/css" href="{% static "peliculasApp/css/estilos2.css" %}">
+  {% comment %} <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"> {% endcomment %}
+  
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">CineMundo</div>
+                <ul class="nav-links">
+                    <li><a class="badge badge-custom"  href="{% url "my_taquilla" %}">Taquilla de Peliculas</a></li>
+                    <li><a class="badge badge-custom"  href="{% url "my_info" %}" target="_blank">informacion</a></li>
+                    <li><a class="badge badge-custom"  href="{% url "my_login" %}">login</a></li>
+                </ul>
+                <div class="search-bar">
+                    <input type="text" placeholder="Buscar películas...">
+                    <button>Buscar</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+  <main class="card" role="region" aria-labelledby="form-title">
+    <header class="header">
+      <h1 id="form-title" class="title">Acceso / Registro</h1>
+      <p class="subtitle">Completa tus datos para continuar.</p>
+    </header>
+
+    <form id="loginForm" novalidate>
+      <div class="grid grid-2">
+        <div class="field">
+          <label for="nombre" class="req">Nombre</label>
+          <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required minlength="2" />
+          <p class="error">Ingresa un nombre válido (mínimo 2 caracteres).</p>
+        </div>
+        <div class="field">
+          <label for="apellidos" class="req">Apellidos</label>
+          <input id="apellidos" name="apellidos" type="text" placeholder="Tus apellidos" required minlength="2" />
+          <p class="error">Ingresa tus apellidos (mínimo 2 caracteres).</p>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="field">
+          <label for="email" class="req">Correo electrónico</label>
+          <input id="email" name="email" type="email" placeholder="tucorreo@ejemplo.com" required />
+          <p class="error">Ingresa un correo válido.</p>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="field">
+          <label for="nacimiento" class="req">Fecha de nacimiento</label>
+          <input id="nacimiento" name="nacimiento" type="date" required max="2009-12-31" />
+          <p class="hint">Debes ser mayor de 16 años.</p>
+          <p class="error">Selecciona una fecha válida.</p>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button type="submit" class="btn btn-primary">Continuar</button>
+        <button type="reset" class="btn btn-ghost">Limpiar</button>
+      </div>
+    </form>
+
+    <footer class="footer">
+      <small>Al continuar aceptas los <a href="#" style="color: var(--accent-2); text-decoration: none">términos</a> y la <a href="#" style="color: var(--accent-2); text-decoration: none">política de privacidad</a>.</small>
+    </footer>
+  </main>
+
+
+</body>
+</html>

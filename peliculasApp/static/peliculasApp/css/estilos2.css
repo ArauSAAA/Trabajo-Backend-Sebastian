@@ -1,0 +1,306 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            line-height: 1.6;
+        }
+        
+.container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header y navegación */
+header {
+            background-color: #1e293b;
+            padding: 20px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #e11d48;
+        }
+        
+.nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+.nav-links li {
+            margin-left: 25px;
+        }
+        
+.nav-links a {
+            color: #f8fafc;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+.nav-links a:hover {
+            color: #e11d48;
+        }
+        
+.search-bar {
+            display: flex;
+            margin-left: 20px;
+        }
+        
+.search-bar input {
+            padding: 8px 12px;
+            border: none;
+            border-radius: 4px 0 0 4px;
+            outline: none;
+        }
+        
+.search-bar button {
+            padding: 8px 12px;
+            background-color: #e11d48;
+            color: white;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+.hero {
+            height: 500px;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://source.unsplash.com/random/1200x500/?movie') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+.hero-content {
+            max-width: 700px;
+        }
+        
+.hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+.hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        
+.btn {
+            display: inline-block;
+            background-color: #e11d48;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        
+.btn:hover {
+            background-color: #be123c;
+        }
+        
+        /* Secciones de películas */
+.section-title {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e11d48;
+            display: inline-block;
+        }
+        
+.movie-section {
+            margin: 60px 0;
+        }
+        
+.movie-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+.movie-card {
+            background-color: #1e293b;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+.movie-card:hover {
+            transform: translateY(-10px);
+        }
+        
+.movie-poster {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+        }
+        
+.movie-info {
+            padding: 20px;
+        }
+        
+        .movie-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        
+.movie-meta {
+            display: flex;
+            justify-content: space-between;
+            color: #94a3b8;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+        
+.movie-description {
+            color: #cbd5e1;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+            display: -webkit-box;
+
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+.read-more {
+            color: #e11d48;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+        
+        /* Footer */
+footer {
+            background-color: #1e293b;
+            padding: 40px 0;
+            margin-top: 60px;
+        }
+        
+.footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+        
+.footer-column h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #e11d48;
+        }
+        
+.footer-column ul {
+            list-style: none;
+        }
+        
+.footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+.footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+.footer-column a:hover {
+            color: #e11d48;
+        }
+        
+.social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+.social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: #334155;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: #e11d48;
+        }
+        
+.copyright {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #334155;
+            color: #94a3b8;
+        }
+        
+        /* Responsive */
+@media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .movie-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+        }
+.container {
+      width: 90%;
+      margin: auto;
+      padding: 20px;
+    }
+.pelicula {
+      background: #2c2c2c;
+      border-radius: 10px;
+      margin: 20px 0;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+.pelicula img {
+      width: 150px;
+      border-radius: 10px;
+    }
+.info h2 {
+      margin: 0;
+      color: #ffcc00;
+    }
+    
+.info p {
+      margin: 5px 0;
+    }
+footer {
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+      background-color: #111;
+    }
