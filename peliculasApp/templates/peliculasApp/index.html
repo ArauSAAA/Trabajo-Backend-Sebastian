@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineMundo - Información de Películas</title>
+    <link rel="stylesheet" href="{% static 'peliculasApp/css/estilos2.css' %}">
+</head>
+<body>
+    <!-- Header con navegación -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">CineMundo</div>
+                <ul class="nav-links">
+                    <li><a class="badge badge-custom"  href="{% url "my_taquilla" %}">Taquilla de Peliculas</a></li>
+                    <li><a class="badge badge-custom"  href="{% url "my_info" %}" target="_blank">informacion</a></li>
+                    <li><a class="badge badge-custom"  href="{% url "my_login" %}">login</a></li>
+                </ul>
+                <div class="search-bar">
+                    <input type="text" placeholder="Buscar películas...">
+                    <button>Buscar</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Descubre el mundo del cine</h1>
+            <p>Encuentra información sobre tus películas favoritas, los últimos estrenos y clásicos imperdibles.</p>
+            <a href="#" class="btn">Explorar Películas</a>
+        </div>
+    </section>
+
+    <!-- Sección de Estrenos -->
+    <section class="movie-section container">
+        <h2 class="section-title">Últimos Estrenos</h2>
+        <div class="movie-grid">
+            <!-- Película 1 -->
+            <div class="movie-card">
+                <img src="{% static 'peliculasApp/images/interstellar.jpg' %}" alt="Película de acción" class="movie-poster">
+                <div class="movie-info">
+                    <h3 class="movie-title">Misión Imposible 7</h3>
+                    <div class="movie-meta">
+                        <span>2023</span>
+                        <span>Acción</span>
+                    </div>
+                    <p class="movie-description">Ethan Hunt y su equipo se embarcan en su misión más peligrosa hasta la fecha: rastrear una nueva y aterradora arma que amenaza a toda la humanidad.</p>
+                    <a href="#" class="read-more">Ver más</a>
+                </div>
+            </div>
+            
+            <!-- Película 2 -->
+            <div class="movie-card">
+                <img src="{% static 'peliculasApp/images/antes_de_ti.jpg' %}" alt="Película de fantasía" class="movie-poster">
+                <div class="movie-info">
+                    <h3 class="movie-title">El Reino Mágico</h3>
+                    <div class="movie-meta">
+                        <span>2023</span>
+                        <span>Fantasía</span>
+                    </div>
+                    <p class="movie-description">Una joven descubre un mundo mágico escondido dentro de un antiguo libro y debe luchar para salvar este reino de fuerzas oscuras que amenazan con destruirlo.</p>
+                    <a href="#" class="read-more">Ver más</a>
+                </div>
+            </div>
+            
+            <!-- Película 3 -->
+            <div class="movie-card">
+                <img src="{% static 'peliculasApp/images/spiderman.jpg' %}" alt="Película dramática" class="movie-poster">
+                <div class="movie-info">
+                    <h3 class="movie-title">La Última Carta</h3>
+                    <div class="movie-meta">
+                        <span>2023</span>
+                        <span>Drama</span>
+                    </div>
+                    <p class="movie-description">La conmovedora historia de un veterano de guerra que regresa a casa después de años y debe enfrentarse a los fantasmas de su pasado para reconstruir su vida.</p>
+                    <a href="#" class="read-more">Ver más</a>
+                </div>
+            </div>
+            
+            <!-- Película 4 -->
+            <div class="movie-card">
+                <img src="{% static 'peliculasApp/images/los_increibles.jpg' %}" alt="Película de ciencia ficción" class="movie-poster">
+                <div class="movie-info">
+                    <h3 class="movie-title">Horizonte Final</h3>
+                    <div class="movie-meta">
+                        <span>2023</span>
+                        <span>Ciencia Ficción</span>
+                    </div>
+                    <p class="movie-description">En un futuro distópico, un grupo de exploradores espaciales descubre un planeta habitable, pero pronto se dan cuenta de que no están solos.</p>
+                    <a href="#" class="read-more">Ver más</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Películas Populares -->
+    <section class="movie-section container">
+        <h2 class="section-title">Películas Populares</h2>
+        <div class="movie-grid">
+            <!-- Película 1 -->
+            <div class="movie-card">
+                <img src="{% static 'peliculasApp/images/no_way_home.jpg' %}" alt="Película clásica" class="movie-poster">
+                <div class="movie-info">
+                    <h3 class="movie-title">El Padrino</h3>
+                    <div class="movie-meta">
+                        <span>1972</span>
+                        <span>Drama</span>
+                    </div>
+                    <p class="movie-description">La saga de la familia Corleone, una de las dinastías de crimen organizado más poderosas de Estados Unidos, dirigida por el patriarca Vito Corleone.</p>
+                    <a href="#" class="read-more">Ver más</a>
+                </div>
+            </div>
+            
+            <!-- Película 2 -->
+            <div class="movie-card">
+                <img src="{% static 'peliculasApp/images/son_ninos.jpg' %}" alt="Película de aventura" class="movie-poster">
+                <div class="movie-info">
+                    <h3 class="movie-title">Indiana Jones</h3>
+                    <div class="movie-meta">
+                        <span>1981</span>
+                        <span>Aventura</span>
+                    </div>
+                    <p class="movie-description">El arqueólogo Indiana Jones se embarca en una peligrosa misión para encontrar el Arca de la Alianza antes de que caiga en manos de los nazis.</p>
+                    <a href="#" class="read-more">Ver más</a>
+                </div>
+            </div>
+            
+            <!-- Película 3 -->
+            <div class="movie-card">
+                <img src="{% static 'peliculasApp/images/los_simpson_pelicula.jpg' %}" alt="Película animada" class="movie-poster">
+                <div class="movie-info">
+                    <h3 class="movie-title">El Viaje de Chihiro</h3>
+                    <div class="movie-meta">
+                        <span>2001</span>
+                        <span>Animación</span>
+                    </div>
+                    <p class="movie-description">Una niña de 10 años llamada Chihiro descubre un mundo secreto de espíritus extraños y dioses antiguos cuando sus padres se transforman en cerdos.</p>
+                    <a href="#" class="read-more">Ver más</a>
+                </div>
+            </div>
+            
+            <!-- Película 4 -->
+            <div class="movie-card">
+                <img src="{% static 'peliculasApp/images/karate_kid.jpg' %}" alt="Película de thriller" class="movie-poster">
+                <div class="movie-info">
+                    <h3 class="movie-title">El Silencio de los Inocentes</h3>
+                    <div class="movie-meta">
+                        <span>1991</span>
+                        <span>Thriller</span>
+                    </div>
+                    <p class="movie-description">Una joven agente del FBI debe confiar en un brillante psiquiatra caníbal para capturar a otro asesino en serie que despelleja a sus víctimas.</p>
+                    <a href="#" class="read-more">Ver más</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>CineMundo</h3>
+                    <p>Tu destino para descubrir y explorar el maravilloso mundo del cine.</p>
+                    <div class="social-links">
+                        <a href="#"><span>FB</span></a>
+                        <a href="#"><span>TW</span></a>
+                        <a href="#"><span>IG</span></a>
+                        <a href="#"><span>YT</span></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Estrenos</a></li>
+                        <li><a href="#">Géneros</a></li>
+                        <li><a href="#">Top Películas</a></li>
+                        <li><a href="#">Noticias</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Géneros</h3>
+                    <ul>
+                        <li><a href="#">Acción</a></li>
+                        <li><a href="#">Drama</a></li>
+                        <li><a href="#">Comedia</a></li>
+                        <li><a href="#">Ciencia Ficción</a></li>
+                        <li><a href="#">Terror</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li>Email: info@cinemundo.com</li>
+                        <li>Teléfono: +34 912 345 678</li>
+                        <li>Dirección: Calle Cine, 123, Madrid</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 CineMundo. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
